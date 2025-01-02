@@ -1,0 +1,102 @@
+{
+  "items": [
+    {
+      "url": "/api/users/[userId]/riskAssessments/route.ts",
+      "type": "api",
+      "status": "success",
+      "method": "POST"
+    },
+    {
+      "url": "/api/users/[userId]/riskMonitors/route.ts",
+      "type": "api",
+      "status": "success",
+      "method": "GET"
+    },
+    {
+      "url": "/api/users/[userId]/infosecPrograms/route.ts",
+      "type": "api",
+      "status": "success",
+      "method": "POST"
+    },
+    {
+      "url": "/api/users/[userId]/complianceAudits/route.ts",
+      "type": "api",
+      "status": "success",
+      "method": "POST"
+    },
+    {
+      "url": "/api/users/[userId]/customerShowcases/route.ts",
+      "type": "api",
+      "status": "success",
+      "method": "POST"
+    },
+    {
+      "url": "/api/payments/stripe/create-session/route.ts",
+      "type": "api",
+      "status": "success",
+      "method": "POST"
+    },
+    {
+      "url": "/api/payments/stripe/webhook/route.ts",
+      "type": "api",
+      "status": "success",
+      "method": "POST"
+    },
+    {
+      "url": "dashboard/admin/riskAssessment/page.tsx",
+      "type": "page",
+      "status": "success",
+      "userType": "admin",
+      "access": "private"
+    },
+    {
+      "url": "dashboard/admin/riskMonitoring/page.tsx",
+      "type": "page",
+      "status": "success",
+      "userType": "admin",
+      "access": "private"
+    },
+    {
+      "url": "dashboard/complianceOfficer/infosecProgramBuilder/page.tsx",
+      "type": "page",
+      "status": "success",
+      "userType": "complianceOfficer",
+      "access": "private"
+    },
+    {
+      "url": "dashboard/admin/complianceAuditManagement/page.tsx",
+      "type": "page",
+      "status": "success",
+      "userType": "admin",
+      "access": "private"
+    },
+    {
+      "url": "dashboard/user/customerTrustShowcase/page.tsx",
+      "type": "page",
+      "status": "success",
+      "userType": "user",
+      "access": "public"
+    },
+    {
+      "url": "dashboard/user/paymentProcessing/page.tsx",
+      "type": "page",
+      "status": "success",
+      "userType": "user",
+      "access": "private"
+    },
+    {
+      "url": "/(auth)/register/page.tsx",
+      "type": "page",
+      "status": "success",
+      "access": "public",
+      "userType": "all"
+    },
+    {
+      "url": "/(auth)/login/page.tsx",
+      "type": "page",
+      "status": "success",
+      "access": "public",
+      "userType": "all"
+    }
+  ]
+}

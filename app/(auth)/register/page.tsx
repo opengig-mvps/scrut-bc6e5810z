@@ -12,10 +12,25 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useRouter } from "next/navigation";
-import { Loader2, LoaderCircleIcon } from "lucide-react";
+import { LoaderCircleIcon } from "lucide-react";
 import { signIn, useSession } from "next-auth/react";
 import { toast } from "sonner";
 import axios, { isAxiosError } from "axios";
+
+const roles = [
+  {
+    value: "user",
+    label: "User",
+  },
+  {
+    value: "admin",
+    label: "Admin",
+  },
+  {
+    value: "compliance_officer",
+    label: "Compliance Officer",
+  },
+];
 
 const SignupPage = () => {
   const [name, setName] = useState("");
@@ -114,8 +129,11 @@ const SignupPage = () => {
                 <SelectValue placeholder="Select your role" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="tutor">Tutor</SelectItem>
-                <SelectItem value="student">Student</SelectItem>
+                {roles.map((role) => (
+                  <SelectItem key={role.value} value={role.value}>
+                    {role.label}
+                  </SelectItem>
+                ))}
               </SelectContent>
             </Select>
           </div>
@@ -152,8 +170,10 @@ const SignupPage = () => {
               setGoogleLoading(false);
             }}
           >
-            {googleLoading && <Loader2 className="animate-spin mr-2" />} Sign in
-            with Google
+            {googleLoading && (
+              <LoaderCircleIcon className="animate-spin mr-2" />
+            )}{" "}
+            Sign in with Google
           </Button>
         </form>
       </div>
